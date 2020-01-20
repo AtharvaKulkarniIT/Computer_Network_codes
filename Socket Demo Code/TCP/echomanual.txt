@@ -1,0 +1,4 @@
+@localhost ~]$ gcc -pthread -o s server.c
+@localhost ~]$ ./s
+@localhost ~]$ gcc client.c -o c
+@localhost ~]$ ./c

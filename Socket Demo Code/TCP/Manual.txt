@@ -1,0 +1,13 @@
+1. Chnage the ip address to that PC on which you are executing the program.
+
+2. Open terminal and go to file location.
+
+3. Execute:
+	gcc -o s.out "filename".c
+	./s.out
+
+4. Compile and execute server side first and then client side.
+
+5. Output:
+
+
