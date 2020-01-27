@@ -24,7 +24,7 @@ void main(void)
 	//sockaddr_in
 	
 	clientaddr.sin_family=AF_INET; //sin:- sockaddr_in
-	clientaddr.sin_addr.s_addr=inet_addr("172.20.10.5");
+	clientaddr.sin_addr.s_addr=inet_addr("192.168.43.211");
 	clientaddr.sin_port=htons(7616);
 	
 	// bind
