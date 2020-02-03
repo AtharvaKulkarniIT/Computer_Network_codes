@@ -25,7 +25,7 @@ void main()
 		printf("\nSocket is created\n");
 	}
 	servaddr.sin_family = AF_INET;
-	servaddr.sin_addr.s_addr = inet_addr("172.20.10.5");
+	servaddr.sin_addr.s_addr = inet_addr("192.168.43.193");
 	servaddr.sin_port = htons(7616);
 	//bind
 	if(bind(listenfd,(struct sockaddr *)&servaddr,sizeof(servaddr)) == -1)
@@ -46,7 +46,7 @@ void main()
 	FILE *fp = fopen("/home/swapnil/Desktop/CompNet/input.txt","rb");
         if(fp==NULL)
         {
-            printf("File opern error");
+            printf("File open error");
            // return 1;   
         }
         while(1)
