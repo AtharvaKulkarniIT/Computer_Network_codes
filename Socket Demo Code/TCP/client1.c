@@ -72,7 +72,7 @@ int main(int argc, char const *argv[])
 		rem[keylen-1]=input[i+keylen];
 		strcpy(temp,rem);
 	}
-
+	char finaldata[200];
 	strcpy(rem,temp);
 	printf("\nQuotient is ");
 	for (i=0;i<msglen;i++)
@@ -80,12 +80,14 @@ int main(int argc, char const *argv[])
 	printf("\nRemainder is ");
 	for (i=0;i<keylen-1;i++)
 	 printf("%c",rem[i]);
+	strcpy(finaldata,input);
+	strcat(finaldata,rem);
 	printf("\nFinal data is: ");
 	for (i=0;i<msglen;i++)
 	 printf("%c",input[i]);
 	for (i=0;i<keylen-1;i++)
 	 printf("%c",rem[i]);
-	send(sock , input,strlen(input), 0 ); 
+	send(sock , finaldata,strlen(finaldata), 0 ); 
 	printf("\nData sent\n"); 
 	valread = read( sock , buffer, 1024); 
 	printf("%s\n",buffer ); 
