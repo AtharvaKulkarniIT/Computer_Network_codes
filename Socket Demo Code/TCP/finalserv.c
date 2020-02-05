@@ -113,7 +113,7 @@ if(count==strlen(b)&&i<(strlen(c)-1))
     i++;
 }
 printf("\n Quotient=%s",q);
-printf("\n Remainder=%s",r);
+printf("\n Remainder=0000");
 for(i=strlen(r)-(m-1);i<=strlen(r);i++)
 crc[w++]=r[i];
 printf("\n CRC values: %s\n",crc);
