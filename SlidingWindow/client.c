@@ -10,7 +10,7 @@
 
 int main()
 {
-	int sockfd,bytes_received,i=1;
+	int sockfd,bytes_received,i=1,time=0;
 	char receive[30];
 	struct hostent *host;
 	struct sockaddr_in server_addr;
@@ -36,6 +36,8 @@ int main()
 		receive[bytes_received]='\0';
 		if(strcmp(receive,"exit")==0||strcmp(receive,"Exit")==0)
 		{
+			printf("Total time taken: %dms \n",time);
+			sleep(3);
 			close(sockfd);
 			break;
 		}
@@ -45,9 +47,11 @@ int main()
 			{
 				printf("\n Frame %d data %s received\n",i,receive);
 				send(0,receive,strlen(receive),0);
+				time=time+5;
 			}
 			else
 			{
+				time=time+3;
 				send(0,"Negative\n Frame not received!",10,0);
 			}
 			i++;
